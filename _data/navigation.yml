@@ -1,7 +1,7 @@
 # main links links
 main:
   - title: "个人简介"
-    url: "#aboutme"
+    url: "#about-me"
 
   - title: "工作经历"
     url: "#work"
@@ -18,5 +18,8 @@ main:
   - title: "专利"
     url: "#patent"
 
-  - title: "毕业去向"
+  - title: "毕业流向"
     url: "#graduation"
+
+  - title: "成果展示"
+    url: "#demo"
