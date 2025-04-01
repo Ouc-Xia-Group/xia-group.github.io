@@ -15,7 +15,7 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+<span class='anchor' id='aboutme'></span>
 
 2013年06月硕博连读毕业于山东大学，山东省泰山学者青年专家，中国海洋大学青年英才工程第一层次，现任信息科学与工程学部计算机科学与技术学院副院长。
 
