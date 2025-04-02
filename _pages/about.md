@@ -15,24 +15,16 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+<span class='anchor' id='aboutme'></span>
 
-2013年06月硕博连读毕业于山东大学，山东省泰山学者青年专家，中国海洋大学青年英才工程第一层次，现任信息科学与工程学部计算机科学与技术学院副院长。
+<p style="font-size: 17px;">👨‍🏫大家好！我是夏辉。<br>
+🏫2013年06月硕博连读毕业于山东大学，山东省泰山学者青年专家，中国海洋大学青年英才工程第一层次，现任信息科学与工程学部计算机科学与技术学院副院长。<br>
+📚主持/完成有资科研项目18项，包括国家自然科学基金3项，国家重点研发计划课题1项，省自然科学基金2项，中国博士后科学基金第八批特别资助，横向课题3项，并参与国家“863”重点项目、国家科技支撑计划等项目10余项。<br>
+📑以第一作者/通讯作者在IEEE JSAC、IEEE ToN、IEEE TKDE、IEEE TII、IEEE TVT、IEEE TSUSC、IEEE TNSE、IEEE TNSM、IEEE TCC、IEEE IoT-J、NDSS、AAAI、INFOCOM、COCOON等计算机类高水平期刊/会议发表学术论文50余篇，包括中国计算机学会推荐A类/ IEEE/ACM汇刊/ 中科院一区论文40余篇，SCI他引900余次，Google学术引用1800余次。🎊其中NDSS 2024会议论文为海大在计算机网络安全领域四大顶会的首次突破。<br>
+📝授权国家发明专利8项，参与发布国际标准2项。担任ACM中国青岛分会秘书长，担任国际SCI期刊TCE副主编，TSUSC、TCE、SCN、KSII TIIS、Electronics以及国内核心期刊《信息网络安全》编委。<br>
+<b>🧑‍💻主要研究联邦学习、对抗学习、智慧医疗等领域。🎉欢迎同学们报考我的博士研究生和硕士研究生！</b></p>
 
-<span id='work'></span>
-<br>
-# 💻 工作经历
-- 2023年03月 - 2023年12月，国家自然科学基金委信息学部二处，兼聘；
-- 2021年07月 - 至今，中国海洋大学，信息科学与工程学部计算机科学与技术学院，副院长；
-- 2020年07月 - 至今，中国海洋大学，教授、博导；
-- 2017年11月 - 2018年11月，美国乔治华盛顿大学，访问学者；
-- 2013年07月 - 2020年06月，青岛大学，讲师、副教授、硕导
 
-<span id='award'></span>
-<br>
-# 🎖 获奖情况
-- 博士生获奖情况：张睿（21博、博士研究生国家奖学金）、徐硕（22博、博士研究生国家奖学金）
-- 硕士生获奖情况：封学财（21研、硕士研究生国家奖学金）、马明达（22研、硕士研究生国家奖学金）、张祖铭（22研、硕士研究生国家奖学金）
 
 <span id='paper'></span>
 <br>
@@ -80,7 +72,7 @@ redirect_from:
 
 <span id='project'></span>
 <br>
-# 💬 项目
+# 💬 项目研究
 - 国家重点研发计划（课题），多业务域多层动态资源互联与智能管理技术， 2024.12 - 2027.11， 主持/在研
 - 山东省泰山学者青年专家， 2024.01 - 2026.12， 主持/在研
 - 国家自然科学基金面上项目，社交物联网环境下通用信任管理模型的研究， 2022.01 - 2025.12， 主持/在研
@@ -96,10 +88,31 @@ redirect_from:
 - 山东省高等学校科技计划项目， 2016.03 - 2019.02， 主持/已结题
 - 青岛市应用基础研究计划项目， 2018.06 - 2020.05， 主持/已结题
 
+<span id='demo'></span>
+<br>
+# 🔥 成果展示
+<div style="text-align: center;">
+    <video width="800" height="500" controls>
+        <source src="images/demo1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+- 胸部CT肺结节诊断系统是一款专注于肺结节检测与分析的智能医疗工具，当前肺结节早期检测流程存在复杂、检测难度大、人工识别耗时且易受主观因素影响的挑战。我们实验室所研究的胸部CT肺结节诊断系统通过深度学习算法与高精度图像处理技术，能够快速、准确地对肺结节进行自动识别和分类，帮助医生直观查看结节的大小、形态及位置。同时，该系统具备自动化的风险评估功能，可根据结节特征智能分析其良恶性，提供诊断建议，辅助医生进行精准的临床决策。该系统已在潍坊市人民医院影像科和胸外科部署。
+
+<div style="text-align: center;">
+    <video width="800" height="500" controls>
+        <source src="images/demo2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+- 实验室还研究了消化系统肠镜智能检测系统，该系统通过智能化手段提升了肠道疾病的早期诊断能力和检测效率，实现了病理数据的实时自动分析和共享，为医生提供精准的决策支持，进而推动肠道疾病的有效防治，促进“AI + 医疗”的融合。
+<br>
+<p style="font-size: 17px;"><b>🌟之后实验室还会继续对颈动脉斑块智能检测系统、基于3D打印的精准化微导管塑形、中文多模态医学大模型等展开研究，欢迎感兴趣的同学加入我们！</b></p>
+
 
 <span id='patent'></span>
 <br>
-# 📝 专利
+# 📝 专利发明
 - 一种对抗样本的生成方法、系统、装置及介质专利缴费， 国家发明专利， 第一发明人，2025
 - 一种网络安全博弈策略构建方法、装置、设备及存储介质， 国家发明专利， 第一发明人，2024
 - 一种网络资源分配方法、系统、装置及介质， 国家发明专利， 第一发明人，2023
@@ -113,14 +126,21 @@ redirect_from:
 
 <span id='graduation'></span>
 <br>
-#  毕业流向
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+# 🏃🏻‍♀️‍➡️ 毕业去向
+- 24届毕业生：海尔、国安、公安、考公、省联通、浪潮、读博。
+- 25届毕业生：歌尔、银行、潍柴、医院、浪潮、海尔、移动、研究院。
 
-<span id='demo'></span>
+<span id='award'></span>
 <br>
-# 🔥 成果展示
-<video width="800" height="500" controls>
-  <source src="images/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+# 🏅 获奖情况
+- 博士生获奖情况：张睿（21博、博士研究生国家奖学金）、徐硕（22博、博士研究生国家奖学金）
+- 硕士生获奖情况：封学财（21研、硕士研究生国家奖学金）、马明达（22研、硕士研究生国家奖学金）、张祖铭（22研、硕士研究生国家奖学金）
+
+<span id='work'></span>
+<br>
+# 💻 工作经历
+- 2023年03月 - 2023年12月，国家自然科学基金委信息学部二处，兼聘；
+- 2021年07月 - 至今，中国海洋大学，信息科学与工程学部计算机科学与技术学院，副院长；
+- 2020年07月 - 至今，中国海洋大学，教授、博导；
+- 2017年11月 - 2018年11月，美国乔治华盛顿大学，访问学者；
+- 2013年07月 - 2020年06月，青岛大学，讲师、副教授、硕导

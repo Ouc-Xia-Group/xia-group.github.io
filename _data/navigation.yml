@@ -1,25 +1,25 @@
 # main links links
 main:
   - title: "个人简介"
-    url: "#about-me"
-
-  - title: "工作经历"
-    url: "#work"
-
-  - title: "获奖情况"
-    url: "#award"
+    url: "#aboutme"
 
   - title: "论文发表"
     url: "#paper"
 
-  - title: "项目"
+  - title: "项目研究"
     url: "#project"
-
-  - title: "专利"
-    url: "#patent"
-
-  - title: "毕业流向"
-    url: "#graduation"
 
   - title: "成果展示"
     url: "#demo"
+
+  - title: "专利发明"
+    url: "#patent"
+
+  - title: "毕业去向"
+    url: "#graduation"
+    
+  - title: "获奖情况"
+    url: "#award"
+
+  - title: "工作经历"
+    url: "#work"
