@@ -1,5 +1,5 @@
 ---
-layout: compress
+layout: person
 ---
 
 # 🏃🏻‍♀️‍➡️ 毕业去向
