@@ -15,8 +15,25 @@ layout: compress
     {% include masthead.html %}
 
     <div id="main" role="main">
-      {% include sidebar.html %}
-    
+      {% unless page.author_profile == false %}
+        {% include sidebar.html %}
+      {% endunless %}
+      
+      {% if page.i_banner == true %}
+        <div class="top-carousel-container">
+          <div class="top-carousel">
+            <div class="top-slide active">
+              <img src="/images/sysdt.png" alt="轮播图1">
+            </div>
+            <div class="top-slide">
+              <img src="/images/zy.png" alt="轮播图2">
+            </div>
+        
+            <button class="top-carousel-btn prev">&#10094;</button>
+            <button class="top-carousel-btn next">&#10095;</button>
+          </div>
+        </div>
+      {% endif %}
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">

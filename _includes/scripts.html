@@ -1,4 +1,142 @@
-<script src="assets/js/main.min.js"></script>
+<script src="{{'assets/js/main.min.js' | relative_url}}"></script>
 
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const links = document.querySelectorAll('#sidebar-list a');
+  const contentDiv = document.getElementById('content');
+  const headerLeft = document.querySelector('.content-header-left');
+  const headerRight = document.querySelector('.content-header-right');
+
+  // 生成 sidebar 的列表数据
+  const sidebarListData = {
+    {% if navItem %}
+      {% for sidebar in navItem.sidebar_items %}
+        {% if sidebar.list %}
+          "{{ sidebar.title | escape }}": [
+            {% for subitem in sidebar['content-list'] %}
+              { title: "{{ subitem.title | escape }}", url: "{{ subitem.url | escape }}" },
+            {% endfor %}
+          ],
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  };
+
+  // 更新标题栏
+  function updateHeader(parent, title) {
+    if (headerLeft) headerLeft.textContent = title;
+    if (headerRight) {
+      headerRight.innerHTML = `当前位置：<a href="/">首页</a> &gt; <a href="#">${parent}</a> &gt; ${title}`;
+    }
+  }
+
+  // 加载 Markdown
+  function loadMarkdown(file) {
+    if (!file || file === '.md') {
+      contentDiv.innerHTML = '<p>没有指定有效的 Markdown 文件。</p>';
+      return;
+    }
+    fetch(file)
+      .then(response => {
+        if (!response.ok) throw new Error('找不到文件: ' + file);
+        return response.text();
+      })
+      .then(text => {
+        contentDiv.innerHTML = marked.parse(text);
+      })
+      .catch(error => {
+        contentDiv.innerHTML = `<p>加载失败: ${error.message}</p>`;
+      });
+  }
+
+  // 加载列表
+  function loadContentList(title) {
+    const list = sidebarListData[title];
+    if (!list) {
+      contentDiv.innerHTML = '<p>未找到对应内容列表。</p>';
+      return;
+    }
+    contentDiv.innerHTML = `
+    <div class="content-list paged-list">
+      <ul id="paged-list-container"></ul>
+      <div class="pagination" id="pagination-controls"></div>
+    </div>
+  `;
+
+  renderPagedList(list, 10);
+  }
+
+  // 处理链接点击
+  function handleLinkClick(link) {
+    const file = link.getAttribute('data-file');
+    const type = link.getAttribute('data-type');
+    const parent = link.getAttribute('data-parent');
+    const title = link.textContent.trim();
+
+    updateHeader(parent, title);
+
+    if (type === 'list') {
+      loadContentList(title);
+    } else {
+      loadMarkdown(file);
+    }
+  }
+
+  // 给 sidebar 所有链接绑定事件
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      handleLinkClick(this);
+    });
+  });
+
+  // 默认加载第一个
+  if (links.length > 0) {
+    handleLinkClick(links[0]);
+  }
+});
+
+function renderPagedList(list, itemsPerPage = 10) {
+    const container = document.getElementById('paged-list-container');
+    const pagination = document.getElementById('pagination-controls');
+    let currentPage = 1;
+    const totalPages = Math.ceil(list.length / itemsPerPage);
+
+    function showPage(page) {
+      container.innerHTML = '';
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageItems = list.slice(start, end);
+
+      pageItems.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'list-item';
+        li.innerHTML = `<div class="list-card"><a href="${item.url}">${item.title}</a></div>`;
+        container.appendChild(li);
+      });
+
+      renderPagination();
+    }
+
+    function renderPagination() {
+      pagination.innerHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add('active');
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          showPage(currentPage);
+        });
+        pagination.appendChild(btn);
+      }
+    }
+
+    showPage(currentPage);
+  }
+
+</script>

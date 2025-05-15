@@ -1,0 +1,65 @@
+---
+layout: default
+title: 所有动态
+permalink: /all_news/
+author_profile: false
+i_banner: false
+---
+
+<div class="news-banner">
+  <img src="/images/sysdt.png" alt="实验室动态横幅图">
+</div>
+
+<div class="news-header-bar">
+  <div class="news-header-left">实验室动态</div>
+  <div class="news-header-right">当前位置：<a href="/">首页</a> &gt; 实验室动态</div>
+</div>
+
+<div class="news-list" id="news-list">
+  <ul>
+    {% for item in site.news reversed %}
+    <li class="news-item">
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      <span>{{ item.date | date: "%Y-%m-%d" }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="pagination" id="pagination-controls"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log("分页脚本已加载 ✅");
+    document.querySelectorAll('.news-item.active')
+
+    const perPage = 5;
+    const items = document.querySelectorAll('.news-item');
+    const totalPages = Math.ceil(items.length / perPage);
+    const pagination = document.getElementById('pagination-controls');
+
+    function showPage(page) {
+      items.forEach((item, index) => {
+        item.classList.remove('active');
+        if (index >= (page - 1) * perPage && index < page * perPage) {
+          item.classList.add('active');
+        }
+      });
+      renderPagination(page);
+    }
+
+    function renderPagination(currentPage) {
+      pagination.innerHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.innerText = i;
+        if (i === currentPage) btn.classList.add('active');
+        // btn.classList.add('color:blue')
+        btn.onclick = () => showPage(i);
+        pagination.appendChild(btn);
+      }
+    }
+
+    showPage(1);
+  });
+</script>

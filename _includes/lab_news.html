@@ -1,0 +1,171 @@
+<div class="lab-news-section">
+    <div class="lab-news-left">
+        <div class="lab-news-header">
+            <h2>实验室动态 <span>Laboratory dynamics</span></h2>
+            <a class="more-link" href="/all_news/">更多 >></a>
+          </div>
+        <ul class="news-list">
+          {% assign sorted_news = site.news | sort: "date" | reverse %}
+          {% for item in sorted_news limit:6 %}
+            <li>
+              <a href="{{ item.url }}">{{ item.title }}</a>
+              <span>{{ item.date | date: "%m-%d" }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
+  
+    <div class="lab-news-right carousel-container">
+      <div class="carousel">
+        {% assign re_news = site.news | where: "re", true | sort: "date" | reverse %}
+        {% for item in re_news limit:3 %}
+          <div class="carousel-slide {% if forloop.first %}active{% endif %}">
+            <img src="{{ item.img | default: '/images/xiahui.png' }}" alt="{{ news.title }}">
+            <div class="carousel-caption">
+              <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+              <p>{{ item.content | strip_html | truncate: 100, "…" }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>      
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+</div>
+
+<div class="project-carousel-section">
+    <div class="project-carousel-header">
+        <div class="project-carousel-title">
+          <h2>成果展示</h2>
+          <p>Research</p>
+        </div>
+        <a href="/_pages/project/index" class="more-link">更多 >></a>
+    </div>
+  
+    <div class="project-carousel-wrapper">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="project-carousel-track">
+        {% assign nav_item = site.data.navigation.main | where: "title", "成果展示" | first %}
+        {% for section in nav_item.sidebar_items %}
+          {% if section.content-list %}
+            {% for project in section.content-list %}
+              <a href="{{ project.url }}" class="project-card">
+                <img src="{{ project.img | default: '/images/xiahui.png' }}" alt="{{ project.title }}">
+                <div class="project-title">{{ project.title }}</div>
+              </a>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <button class="carousel-btn right">&#10095;</button>
+  </div>
+  
+
+<script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+  
+    let current = 0;
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+  
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+  
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+  
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+  
+    // 自动播放
+    setInterval(nextSlide, 5000);
+
+    const topSlides = document.querySelectorAll('.top-slide');
+    const topNext = document.querySelector('.top-carousel-btn.next');
+    const topPrev = document.querySelector('.top-carousel-btn.prev');
+    let topIndex = 0;
+  
+    function showTopSlide(index) {
+      topSlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+  
+    function nextTopSlide() {
+      topIndex = (topIndex + 1) % topSlides.length;
+      showTopSlide(topIndex);
+    }
+  
+    function prevTopSlide() {
+      topIndex = (topIndex - 1 + topSlides.length) % topSlides.length;
+      showTopSlide(topIndex);
+    }
+  
+    topNext.addEventListener('click', nextTopSlide);
+    topPrev.addEventListener('click', prevTopSlide);
+  
+    setInterval(nextTopSlide, 5000); // 每5秒切换一次
+
+    const track = document.querySelector('.project-carousel-track');
+    const leftBtn = document.querySelector('.carousel-btn.left');
+    const rightBtn = document.querySelector('.carousel-btn.right');
+    const cardWidth = document.querySelector('.project-card').offsetWidth + 20;
+
+    let isAnimating = false;
+
+    rightBtn.addEventListener('click', () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const firstCard = track.querySelector('.project-card');
+    const clone = firstCard.cloneNode(true);
+    track.appendChild(clone);
+
+    track.style.transition = 'transform 0.4s ease';
+    track.style.transform = `translateX(-${cardWidth}px)`;
+
+    setTimeout(() => {
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0)';
+        firstCard.remove(); // 删除原来的第一张
+        isAnimating = false;
+    }, 400);
+    });
+
+    leftBtn.addEventListener('click', () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const cards = track.querySelectorAll('.project-card');
+    const lastCard = cards[cards.length - 1];
+    const clone = lastCard.cloneNode(true);
+    track.insertBefore(clone, cards[0]);
+    lastCard.remove();
+
+    track.style.transition = 'none';
+    track.style.transform = `translateX(-${cardWidth}px)`;
+
+    setTimeout(() => {
+        track.style.transition = 'transform 0.4s ease';
+        track.style.transform = 'translateX(0)';
+    }, 10);
+
+    setTimeout(() => {
+        isAnimating = false;
+    }, 400);
+    });
+
+  </script>
+  
+  
+  

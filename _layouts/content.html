@@ -1,0 +1,60 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+</head>
+
+<body>
+
+  {% include browser-upgrade.html %}
+  {% include masthead.html %}
+  <div class="news-banner">
+    <img src="/images/sysdt.png" alt="实验室动态横幅图">
+  </div>
+  <div id="main" role="main">
+    <div class="container">
+
+      {% assign navItem = site.data.navigation.main | where: "title", page.title | first %}
+      {% if navItem %}
+      
+        {% if navItem.sidebar %}
+        <aside class="side-nav">
+          <ul id="sidebar-list">
+            {% for sidebar in navItem.sidebar_items %}
+            <li class="sidebar-item">
+              <a href="javascript:void(0);"
+                 data-file="{{ sidebar.file | default: sidebar.url | replace: ' ', '-' }}.md"
+                 data-type="{% if sidebar.list %}list{% else %}markdown{% endif %}"
+                 data-parent="{{ navItem.title }}">
+                {{ sidebar.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </aside>
+        {% endif %}
+
+        <main class="main">
+          <div class="content-header-bar">
+            <div class="content-header-left"></div>
+            <div class="content-header-right"></div>
+          </div>
+          <div id="content"></div>
+        </main>
+
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% include scripts.html %}
+
+</body>
+</html>
+
+
