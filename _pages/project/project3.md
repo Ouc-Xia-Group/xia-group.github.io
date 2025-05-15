@@ -6,7 +6,7 @@ layout: news_info
 
 <div style="text-align: center;">
     <video width="800" height="500" controls>
-        <source src="{{ 'images/demo3.mp4' | relative_src }} " type="video/mp4">
+        <source src="{{ 'images/demo3.mp4' | relative_url }} " type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
