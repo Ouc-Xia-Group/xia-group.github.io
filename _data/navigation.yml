@@ -32,5 +32,5 @@ main:
         url: "/_pages/project/project"
 
   - title: "实验室动态"
-    url: "/all_news"
+    url: "all_news"
 
