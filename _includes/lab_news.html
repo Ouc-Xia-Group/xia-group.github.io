@@ -2,7 +2,7 @@
     <div class="lab-news-left">
         <div class="lab-news-header">
             <h2>实验室动态 <span>Laboratory dynamics</span></h2>
-            <a class="more-link" href="/all_news/">更多 >></a>
+            <a class="more-link" href="{{ '/all_news/' | relative_url}}">更多 >></a>
           </div>
         <ul class="news-list">
           {% assign sorted_news = site.news | sort: "date" | reverse %}
