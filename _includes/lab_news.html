@@ -22,7 +22,7 @@
           <div class="carousel-slide {% if forloop.first %}active{% endif %}">
             <img src="{{ item.img | default: '/images/xiahui.png' }}" alt="{{ news.title }}">
             <div class="carousel-caption">
-              <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+              <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
               <p>{{ item.content | strip_html | truncate: 100, "…" }}</p>
             </div>
           </div>
@@ -39,7 +39,7 @@
           <h2>成果展示</h2>
           <p>Research</p>
         </div>
-        <a href="/_pages/project/index" class="more-link">更多 >></a>
+        <a href="_pages/project/index" class="more-link">更多 >></a>
     </div>
   
     <div class="project-carousel-wrapper">
@@ -49,7 +49,7 @@
         {% for section in nav_item.sidebar_items %}
           {% if section.content-list %}
             {% for project in section.content-list %}
-              <a href="{{ project.url }}" class="project-card">
+              <a href="{{ project.url | relative_url }}" class="project-card">
                 <img src="{{ project.img | default: '/images/xiahui.png' }}" alt="{{ project.title }}">
                 <div class="project-title">{{ project.title }}</div>
               </a>
