@@ -8,11 +8,11 @@ main:
     sidebar: true
     sidebar_items:
       - title: "实验室简介"
-        url: "_pages/introduce/person"
+        url: "pages/introduce/person"
       - title: "导师队伍"
-        url: "_pages/introduce/people"
+        url: "pages/introduce/people"
       - title: "毕业去向"
-        url: "_pages/introduce/graduation"
+        url: "pages/introduce/graduation"
 
 
   - title: "成果展示"
