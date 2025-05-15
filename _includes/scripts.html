@@ -40,7 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
       contentDiv.innerHTML = '<p>没有指定有效的 Markdown 文件。</p>';
       return;
     }
-    fetch(file)
+    let rawFile = file;
+    if (file.startsWith('_pages/') || file.endsWith('.md')) {
+      rawFile = `https://raw.githubusercontent.com/Ouc-Xia-Group/xia-group.github.io/main/${file}`;
+    }
+    fetch(rawFile)
       .then(response => {
         if (!response.ok) throw new Error('找不到文件: ' + file);
         return response.text();
