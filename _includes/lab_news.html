@@ -5,6 +5,7 @@
             <a class="more-link" href="/all_news/">更多 >></a>
           </div>
         <ul class="news-list">
+          {% if news_items %}
           {% assign sorted_news = site.news | sort: "date" | reverse %}
           {% for item in sorted_news limit:6 %}
             <li>
@@ -12,6 +13,7 @@
               <span>{{ item.date | date: "%m-%d" }}</span>
             </li>
           {% endfor %}
+          {% endif %}
         </ul>
     </div>
   
