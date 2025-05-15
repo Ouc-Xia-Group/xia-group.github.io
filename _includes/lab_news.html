@@ -8,7 +8,7 @@
           {% assign sorted_news = site.news | sort: "date" | reverse %}
           {% for item in sorted_news limit:6 %}
             <li>
-              <a href="{{ item.url }}">{{ item.title }}</a>
+              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
               <span>{{ item.date | date: "%m-%d" }}</span>
             </li>
           {% endfor %}
