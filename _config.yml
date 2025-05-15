@@ -63,6 +63,8 @@ author:
 include:
   - .htaccess
   - _pages
+  - assets
+  - images
   - files
 exclude:
   - docs
@@ -161,3 +163,8 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+collections:
+  news:
+    output: true
+    permalink: /news/:title/
