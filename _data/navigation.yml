@@ -16,7 +16,7 @@ main:
 
 
   - title: "成果展示"
-    url: "/_pages/project/index"
+    url: "_pages/project/index"
     sidebar: true
     sidebar_items:
       - title: "成果展示"
