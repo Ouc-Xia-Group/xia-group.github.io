@@ -3,7 +3,7 @@
 
 <div class="profile-card" markdown="1"><!-- 下面空一行 -->
     
-  ![photo]({{ '/images/xiahui.jpg' | relative_url }})
+  ![photo]('/images/xiahui.jpg' | relative_url)
 
   [**夏辉（教授）**](/_pages/teacher/xiahui)
 
