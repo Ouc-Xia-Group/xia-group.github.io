@@ -2,10 +2,9 @@
 <div class="profile-row">
 
 <div class="profile-card" markdown="1"><!-- 下面空一行 -->
-    
-  <img src="{{ '/images/xiahui.jpg' | relative_url }}"
-       alt="photo">
-
+    <div>
+      <img src="{{ '/images/xiahui.jpg' | relative_url }}" alt="photo"/>
+    </div>
   [**夏辉（教授）**](_pages/teacher/xiahui)
 
   研究方向：人工智能与大数据分析
