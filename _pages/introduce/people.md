@@ -3,7 +3,7 @@
 
 <div class="profile-card" markdown="1"><!-- 下面空一行 -->
     <div>
-      <img src="{{ '/images/xiahui.jpg' | relative_url }}" alt="photo"/>
+      <img src="{{ 'images/xiahui.jpg' | relative_url }}" alt="photo"/>
     </div>
   [**夏辉（教授）**](_pages/teacher/xiahui)
 
