@@ -120,7 +120,7 @@ function renderPagedList(list, itemsPerPage = 10) {
       pageItems.forEach(item => {
         const li = document.createElement('li');
         li.className = 'list-item';
-        li.innerHTML = `<div class="list-card"><a href="${item.url | relative_url}">${item.title}</a></div>`;
+        li.innerHTML = `<div class="list-card"><a href="{{ ${item.url} | relative_url }}">${item.title}</a></div>`;
         container.appendChild(li);
       });
 
