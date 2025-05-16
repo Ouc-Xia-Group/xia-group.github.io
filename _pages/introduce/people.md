@@ -3,9 +3,9 @@
 
 <div class="profile-card" markdown="1"><!-- 下面空一行 -->
     
-  ![photo](../images/xiahui.jpg)
+  ![photo](.../images/xiahui.jpg)
 
-  [**夏辉（教授）**](/_pages/teacher/xiahui)
+  [**夏辉（教授）**](_pages/teacher/xiahui)
 
   研究方向：人工智能与大数据分析
 
@@ -26,7 +26,7 @@
 
   ![photo](images/youyang.png)
 
-  [**尤洋（副教授）**](/_pages/teacher/youyang)
+  [**尤洋（副教授）**](_pages/teacher/youyang)
 
   研究方向：人工智能、强化学习、智能博弈、网络信息安全
 
@@ -38,7 +38,7 @@
     
   ![photo](images/fuyu.png)
 
-  [**傅宇**](/_pages/teacher/fuyu)
+  [**傅宇**](_pages/teacher/fuyu)
 
   研究方向：医学影像处理与智能计算
 
@@ -54,7 +54,7 @@
     
   ![photo](images/chenshuzhen.jpg)
 
-  [**陈姝祯**](/_pages/teacher/chenshuzhen)
+  [**陈姝祯**](_pages/teacher/chenshuzhen)
 
   研究方向：边缘智能与隐私计算
 
@@ -65,7 +65,7 @@
   
   ![photo](images/yujiaping.jpg)
 
-  [**于佳平**](/_pages/teacher/yujiaping)
+  [**于佳平**](_pages/teacher/yujiaping)
 
   研究方向：边缘计算场景下的资源跨域协同, Web3, DID
 
