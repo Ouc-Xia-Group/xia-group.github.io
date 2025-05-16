@@ -1,8 +1,3 @@
----
-author_profile: false
-layout: person
----
-
 
 - ___Hui Xia*___, Xiangwei Zhao, Luming Wang, Rui Zhang, and Shuo Xu，Clean-Label Graph Backdoor Attack in the Node Classification Task， The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)， 2025， CCF A类会议，第一作者/通讯作者
 - Ding Li, ___Hui Xia*___, Xin Li, Rui Zhang, and Mingda Ma，Rethinking the Robustness of Graph Neural Networks: An Information Theory Perspective， Knowledge-based Systems (KBS)， 2025， 中科院1区期刊，学生一作/通讯作者
