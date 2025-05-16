@@ -24,7 +24,7 @@
 
 <div class="profile-card" markdown="1">
 
-  ![photo](/images/youyang.png)
+  ![photo]({{ '/images/youyang.png' | relative_url }})
 
   [**尤洋（副教授）**](_pages/teacher/youyang)
 
