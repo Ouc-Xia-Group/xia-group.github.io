@@ -3,7 +3,7 @@
 
 <div class="profile-card" markdown="1"><!-- 下面空一行 -->
     
-  ![photo](../images/xiahui.jpg)
+  ![photo](/images/xiahui.jpg)
 
   [**夏辉（教授）**](_pages/teacher/xiahui)
 
@@ -24,7 +24,7 @@
 
 <div class="profile-card" markdown="1">
 
-  ![photo](images/youyang.png)
+  ![photo](/images/youyang.png)
 
   [**尤洋（副教授）**](_pages/teacher/youyang)
 
@@ -36,7 +36,7 @@
 
 <div class="profile-card" markdown="1"><!-- 下面空一行 -->
     
-  ![photo](images/fuyu.png)
+  ![photo](/images/fuyu.png)
 
   [**傅宇**](_pages/teacher/fuyu)
 
@@ -52,7 +52,7 @@
 
 <div class="profile-card" markdown="1"><!-- 下面空一行 -->
     
-  ![photo](images/chenshuzhen.jpg)
+  ![photo](/images/chenshuzhen.jpg)
 
   [**陈姝祯**](_pages/teacher/chenshuzhen)
 
@@ -63,7 +63,7 @@
 
 <div class="profile-card" markdown="1">
   
-  ![photo](images/yujiaping.jpg)
+  ![photo](/images/yujiaping.jpg)
 
   [**于佳平**](_pages/teacher/yujiaping)
 
