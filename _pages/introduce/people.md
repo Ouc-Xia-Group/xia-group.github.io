@@ -2,7 +2,7 @@
 
   <div class="profile-card">
     <a href="_pages/teacher/xiahui">
-      <img src="images/xiahui.jpg" alt="photo" />
+      <img src="{{ 'images/xiahui.jpg' | relative_url }}" alt="photo" />
     </a>
     <p><strong>夏辉</strong></p>
     <p>研究方向：人工智能与大数据分析</p>
