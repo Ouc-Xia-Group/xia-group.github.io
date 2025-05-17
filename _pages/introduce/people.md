@@ -1,7 +1,7 @@
 <div class="profile-row">
 
   <div class="profile-card">
-    <a href="_pages/teacher/xiahui.html">
+    <a href="_pages/teacher/xiahui">
       <img src="images/xiahui.jpg" alt="photo" />
     </a>
     <p><strong>夏辉</strong></p>
@@ -18,7 +18,7 @@
 <div class="profile-row">
 
   <div class="profile-card">
-    <a href="_pages/teacher/youyang.html">
+    <a href="_pages/teacher/youyang">
       <img src="images/youyang.png" alt="photo" />
     </a>
     <p><strong>尤洋（副教授）</strong></p>
@@ -27,7 +27,7 @@
   </div>
 
   <div class="profile-card">
-    <a href="_pages/teacher/fuyu.html">
+    <a href="_pages/teacher/fuyu">
       <img src="images/fuyu.png" alt="photo" />
     </a>
     <p><strong>傅宇</strong></p>
@@ -49,7 +49,7 @@
   </div>
 
   <div class="profile-card">
-    <a href="_pages/teacher/yujiaping.html">
+    <a href="_pages/teacher/yujiaping">
       <img src="images/yujiaping.jpg" alt="photo" />
     </a>
     <p><strong>于佳平</strong></p>
