@@ -167,7 +167,7 @@ compress_html:
 collections:
   teacher:
     output: true
-    permalink: /teacher/:name/
+    permalink: /_pages/teacher/:name/
   news:
     output: true
     permalink: /news/:title/
