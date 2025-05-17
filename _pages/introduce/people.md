@@ -18,7 +18,7 @@
 <div class="profile-row">
 
   <div class="profile-card">
-    <a href="/teacher/youyang/">
+    <a href="/xia-group.github.io/_pages/teacher/youyang/">
       <img src="/images/youyang.png" alt="photo" />
     </a>
     <p><strong>尤洋（副教授）</strong></p>
@@ -27,7 +27,7 @@
   </div>
 
   <div class="profile-card">
-    <a href="teacher/fuyu">
+    <a href="/xia-group.github.io/_pages/teacher/fuyu">
       <img src="images/fuyu.png" alt="photo" />
     </a>
     <p><strong>傅宇</strong></p>
@@ -40,7 +40,7 @@
 <div class="profile-row">
 
   <div class="profile-card">
-    <a href="/teacher/chenshuzhen/">
+    <a href="/xia-group.github.io/_pages/teacher/chenshuzhen/">
       <img src="images/chenshuzhen.jpg" alt="photo" />
     </a>
     <p><strong>陈姝祯</strong></p>
@@ -49,7 +49,7 @@
   </div>
 
   <div class="profile-card">
-    <a href="/teacher/yujiaping/">
+    <a href="/xia-group.github.io/_pages/teacher/yujiaping/">
       <img src="images/yujiaping.jpg" alt="photo" />
     </a>
     <p><strong>于佳平</strong></p>
