@@ -1,83 +1,63 @@
-
 <div class="profile-row">
 
-<div class="profile-card" markdown="1"><!-- 下面空一行 -->
-    <div>
-      <img src="{{ '/images/xiahui.jpg' | relative_url }}" alt="photo"/>
-    </div>
+  <div class="profile-card">
+    <a href="_pages/teacher/xiahui.html">
+      <img src="images/xiahui.jpg" alt="photo" />
+    </a>
+    <p><strong>夏辉</strong></p>
+    <p>研究方向：人工智能与大数据分析</p>
+    <p>邮箱：xiahui@ouc.edu.cn</p>
+  </div>
 
-  研究方向：人工智能与大数据分析
+  <div class="profile-card">
+    <!-- 空卡片，可填写其他内容 -->
+  </div>
 
-  邮箱：xiahui@ouc.edu.cn
-</div>
-
-<div class="profile-card" markdown="1">
-
-  
-</div>
-
-</div>
-
-
-<div class="profile-row">
-
-<div class="profile-card" markdown="1">
-
-  ![photo]({{ '/images/youyang.png' | relative_url }})
-
-  [**尤洋（副教授）**](_pages/teacher/youyang)
-
-  研究方向：人工智能、强化学习、智能博弈、网络信息安全
-
-  邮箱：youyang@ouc.edu.cn
-  
-</div>
-
-<div class="profile-card" markdown="1"><!-- 下面空一行 -->
-    
-  ![photo](/images/fuyu.png)
-
-  [**傅宇**](_pages/teacher/fuyu)
-
-  研究方向：医学影像处理与智能计算
-
-  邮箱：fuyu@ouc.edu.cn
-</div>
-
-  
 </div>
 
 <div class="profile-row">
 
-<div class="profile-card" markdown="1"><!-- 下面空一行 -->
-    
-  ![photo](/images/chenshuzhen.jpg)
+  <div class="profile-card">
+    <a href="_pages/teacher/youyang.html">
+      <img src="images/youyang.png" alt="photo" />
+    </a>
+    <p><strong>尤洋（副教授）</strong></p>
+    <p>研究方向：人工智能、强化学习、智能博弈、网络信息安全</p>
+    <p>邮箱：youyang@ouc.edu.cn</p>
+  </div>
 
-  [**陈姝祯**](_pages/teacher/chenshuzhen)
-
-  研究方向：边缘智能与隐私计算
-
-  邮箱：szchen@ouc.edu.cn
-</div>
-
-<div class="profile-card" markdown="1">
-  
-  ![photo](/images/yujiaping.jpg)
-
-  [**于佳平**](_pages/teacher/yujiaping)
-
-  研究方向：边缘计算场景下的资源跨域协同, Web3, DID
-
-  邮箱：yujiaping@ouc.edu.cn
-  
-</div>
+  <div class="profile-card">
+    <a href="_pages/teacher/fuyu.html">
+      <img src="images/fuyu.png" alt="photo" />
+    </a>
+    <p><strong>傅宇</strong></p>
+    <p>研究方向：医学影像处理与智能计算</p>
+    <p>邮箱：fuyu@ouc.edu.cn</p>
+  </div>
 
 </div>
 
+<div class="profile-row">
 
+  <div class="profile-card">
+    <a href="_pages/teacher/chenshuzhen.html">
+      <img src="images/chenshuzhen.jpg" alt="photo" />
+    </a>
+    <p><strong>陈姝祯</strong></p>
+    <p>研究方向：边缘智能与隐私计算</p>
+    <p>邮箱：szchen@ouc.edu.cn</p>
+  </div>
 
+  <div class="profile-card">
+    <a href="_pages/teacher/yujiaping.html">
+      <img src="images/yujiaping.jpg" alt="photo" />
+    </a>
+    <p><strong>于佳平</strong></p>
+    <p>研究方向：边缘计算场景下的资源跨域协同, Web3, DID</p>
+    <p>邮箱：yujiaping@ouc.edu.cn</p>
+  </div>
 
-
+</div>
 
 <style>
   .profile-row {
@@ -87,12 +67,32 @@
     justify-content: center;
     align-items: flex-start;
   }
+
   .profile-card {
     flex: 1;
     min-width: 220px;
     max-width: 300px;
     text-align: center;
     padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
 
+  .profile-card img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  .profile-card a:hover img {
+    transform: scale(1.05);
+  }
+
+  .profile-card p {
+    margin: 6px 0;
   }
 </style>
