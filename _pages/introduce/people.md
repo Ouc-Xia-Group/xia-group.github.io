@@ -2,7 +2,7 @@
 
   <div class="profile-card">
     <a href="/teacher/xiahui/">
-      <img src="{{ 'images/xiahui.jpg' | relative_url }}" alt="photo" />
+      <img src="{{ '/images/xiahui.jpg' | relative_url }}" alt="photo" />
     </a>
     <p><strong>夏辉</strong></p>
     <p>研究方向：人工智能与大数据分析</p>
@@ -19,7 +19,7 @@
 
   <div class="profile-card">
     <a href="/teacher/youyang/">
-      <img src="images/youyang.png" alt="photo" />
+      <img src="/images/youyang.png" alt="photo" />
     </a>
     <p><strong>尤洋（副教授）</strong></p>
     <p>研究方向：人工智能、强化学习、智能博弈、网络信息安全</p>
