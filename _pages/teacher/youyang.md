@@ -2,7 +2,6 @@
 title: youyang
 author_profile: false
 layout: person
-permalink: /teacher/youyang/
 ---
 
 🏫2025年1月入职中国海洋大学，任副教授，入选中国海洋大学青年英才工程第二层次。 <br>
