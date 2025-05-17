@@ -2,7 +2,7 @@
 
   <div class="profile-card">
     <a href="/xia-group.github.io/_pages/teacher/xiahui/">
-      <img src="{{ '/images/xiahui.jpg' | relative_url }}" alt="photo" />
+      <img src="/xia-group.github.io/images/xiahui.jpg" alt="photo" />
     </a>
     <p><strong>夏辉</strong></p>
     <p>研究方向：人工智能与大数据分析</p>
@@ -19,7 +19,7 @@
 
   <div class="profile-card">
     <a href="/xia-group.github.io/_pages/teacher/youyang/">
-      <img src="/images/youyang.png" alt="photo" />
+      <img src="/xia-group.github.io/images/youyang.png" alt="photo" />
     </a>
     <p><strong>尤洋（副教授）</strong></p>
     <p>研究方向：人工智能、强化学习、智能博弈、网络信息安全</p>
@@ -28,7 +28,7 @@
 
   <div class="profile-card">
     <a href="/xia-group.github.io/_pages/teacher/fuyu">
-      <img src="images/fuyu.png" alt="photo" />
+      <img src="/xia-group.github.io/images/fuyu.png" alt="photo" />
     </a>
     <p><strong>傅宇</strong></p>
     <p>研究方向：医学影像处理与智能计算</p>
@@ -41,7 +41,7 @@
 
   <div class="profile-card">
     <a href="/xia-group.github.io/_pages/teacher/chenshuzhen/">
-      <img src="images/chenshuzhen.jpg" alt="photo" />
+      <img src="/xia-group.github.io/images/chenshuzhen.jpg" alt="photo" />
     </a>
     <p><strong>陈姝祯</strong></p>
     <p>研究方向：边缘智能与隐私计算</p>
@@ -50,7 +50,7 @@
 
   <div class="profile-card">
     <a href="/xia-group.github.io/_pages/teacher/yujiaping/">
-      <img src="images/yujiaping.jpg" alt="photo" />
+      <img src="/xia-group.github.io/images/yujiaping.jpg" alt="photo" />
     </a>
     <p><strong>于佳平</strong></p>
     <p>研究方向：边缘计算场景下的资源跨域协同, Web3, DID</p>
