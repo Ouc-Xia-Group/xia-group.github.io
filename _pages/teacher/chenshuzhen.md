@@ -2,7 +2,6 @@
 title: chenshuzhen
 author_profile: false
 layout: person
-permalink: /teacher/chenshuzhen/
 ---
 
 👨‍🏫主要研究方向：边缘智能与隐私计算<br>
