@@ -2,6 +2,7 @@
 title: xiahui
 author_profile: false
 layout: person
+permalink: /teacher/xiahui/
 ---
 
 
