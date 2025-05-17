@@ -165,6 +165,9 @@ compress_html:
     envs: development
 
 collections:
+  teacher:
+    output: true
+    permalink: /teacher/:name/
   news:
     output: true
     permalink: /news/:title/
