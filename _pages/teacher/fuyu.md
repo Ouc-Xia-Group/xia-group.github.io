@@ -2,7 +2,6 @@
 title: fuyu
 author_profile: false
 layout: person
-permalink: /teacher/fuyu/
 ---
 
 👨‍🏫主要研究方向为医学影像处理、深度学习、人工智能等。<br>
