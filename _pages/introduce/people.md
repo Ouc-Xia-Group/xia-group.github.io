@@ -10,7 +10,7 @@
   </div>
 
   <div class="profile-card">
-    <!-- 空卡片，可填写其他内容 -->
+   
   </div>
 
 </div>
@@ -76,7 +76,6 @@
     padding: 16px;
     border: 1px solid #ddd;
     border-radius: 12px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .profile-card img {
