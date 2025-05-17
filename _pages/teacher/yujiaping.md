@@ -2,6 +2,7 @@
 title: yujiaping
 author_profile: false
 layout: person
+permalink: /teacher/yujiaping/
 ---
 
 📑第一作者在国际顶级期刊与会议上发表论文十余篇
