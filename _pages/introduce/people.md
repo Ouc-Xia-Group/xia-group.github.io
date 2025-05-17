@@ -1,7 +1,7 @@
 <div class="profile-row">
 
   <div class="profile-card">
-    <a href="/teacher/xiahui/">
+    <a href="/xia-group.github.io/_pages/teacher/xiahui/">
       <img src="{{ '/images/xiahui.jpg' | relative_url }}" alt="photo" />
     </a>
     <p><strong>夏辉</strong></p>
