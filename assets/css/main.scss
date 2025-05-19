@@ -456,12 +456,12 @@ main {
   }
   .carousel-caption {
     height: auto;        /* 让其随内容增高 */
-    min-height: 170px;   /* 保证至少 200px 高 */
+    min-height: 166px;   /* 保证至少 200px 高 */
   }
   .carousel-caption p {
     /* 原来是 4 行 68px，这里改成 6 行，大约 96px */
-    -webkit-line-clamp: 5;
-    height: calc(1.6em * 5); /* = 96px if 1em=16px */
+    -webkit-line-clamp: 6;
+    height: calc(1.6em * 6); /* = 96px if 1em=16px */
   }
 }
   
