@@ -168,10 +168,11 @@ main {
         padding: 0 25px;
         gap: 20px;
     }
+    .page,
     .page__content {
-      flex-direction: column;
-        padding: 0 25px;
-        gap: 20px;
+        width: 1280px;
+        margin-left: 300px;
+        padding: 2rem;
     }
     main {
         max-width: 100%;
