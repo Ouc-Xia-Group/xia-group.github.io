@@ -29,7 +29,7 @@ main:
       - title: "论文发表" 
         url: "project/paper"
       - title: "项目研究" 
-        url: "project/project"
+        url: "project/projects"
 
   - title: "实验室动态"
     url: "all_news"
