@@ -455,8 +455,8 @@ main {
     height: 45px
   }
   .carousel-caption {
-    height: 165px;        /* 让其随内容增高 */
-    min-height: 150px;   /* 保证至少 200px 高 */
+    height: auto;        /* 让其随内容增高 */
+    min-height: 170px;   /* 保证至少 200px 高 */
   }
   .carousel-caption p {
     /* 原来是 4 行 68px，这里改成 6 行，大约 96px */
