@@ -82,6 +82,8 @@
     height: auto;
     border-radius: 8px;
     margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
     transition: transform 0.2s ease;
   }
 
