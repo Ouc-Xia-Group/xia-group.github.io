@@ -118,6 +118,7 @@ function renderPagedList(list, itemsPerPage = 10) {
       const pageItems = list.slice(start, end);
 
       pageItems.forEach(item => {
+        item.url = 'https://ouc-xia-group.github.io/xia-group.github.io/' + item.url
         const li = document.createElement('li');
         li.className = 'list-item';
         li.innerHTML = `<div class="list-card"><a href="${item.url}">${item.title}</a></div>`;
