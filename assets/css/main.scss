@@ -359,8 +359,9 @@ main {
   }
   
   .lab-news-right {
-    flex: 1;
-    max-width: 500px;
+     flex: 0 0 300px;  /* 固定宽度 */
+     min-width: 280px; /* 最小宽度，防止压缩 */
+     margin-left: 20px;
   }
   
   .lab-news-right img {
