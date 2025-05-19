@@ -170,7 +170,7 @@ main {
     }
     .page,
     .page__content {
-        width: 1280px;
+        max-width: 100%;
         margin-left: 300px;
         padding: 2rem;
     }
