@@ -247,7 +247,6 @@ main {
 
 .lab-news-section {
   display: flex;
-  flex-wrap: wrap;          /* 允许换行 */
   justify-content: space-between;
   gap: 30px;
   margin: 40px 0;
@@ -256,7 +255,7 @@ main {
 
 .lab-news-left {
   flex: 1 1 auto;                /* 大屏时占比稍大 */
-  min-width: 200px;
+  min-width: 300px;
 }
 
 /* —— 响应式：宽度小于 768px 时 —— */
@@ -359,7 +358,7 @@ main {
   }
   
   .lab-news-right {
-     flex: 0 0 300px;  /* 固定宽度 */
+     flex: 0 0 400px;  /* 固定宽度 */
      min-width: 280px; /* 最小宽度，防止压缩 */
      margin-left: 20px;
   }
