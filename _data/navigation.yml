@@ -8,11 +8,11 @@ main:
     sidebar: true
     sidebar_items:
       - title: "实验室简介"
-        url: "_pages/introduce/person"
+        url: "introduce/person"
       - title: "导师队伍"
         url: "introduce/people"
       - title: "毕业去向"
-        url: "_pages/introduce/graduation"
+        url: "introduce/graduation"
 
 
   - title: "成果展示"
@@ -27,9 +27,9 @@ main:
           {title: '肠镜智能检测系统', url: '_pages/project/project3',img: 'images/cxt.png'}
         ]
       - title: "论文发表" 
-        url: "_pages/project/paper"
+        url: "project/paper"
       - title: "项目研究" 
-        url: "_pages/project/project"
+        url: "project/project"
 
   - title: "实验室动态"
     url: "all_news"
