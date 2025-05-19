@@ -74,8 +74,6 @@
     max-width: 300px;
     text-align: center;
     padding: 16px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
   }
 
   .profile-card img {
