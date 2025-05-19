@@ -364,12 +364,19 @@ main {
   }
 
   .page__content {
-    width: 1280px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
   .page{
-    width: 1280px;
-    margin-left:300px
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
   .lab-news-header {
