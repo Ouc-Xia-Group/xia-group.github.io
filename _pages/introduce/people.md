@@ -11,7 +11,6 @@
 
 </div>
 
-
 <div class="profile-row">
 
   <div class="profile-card">
@@ -31,22 +30,6 @@
     <p>研究方向：医学影像处理与智能计算</p>
     <p>邮箱：fuyu@ouc.edu.cn</p>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 
@@ -70,32 +53,13 @@
     <p>邮箱：yujiaping@ouc.edu.cn</p>
   </div>
 
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <style>
   .profile-row {
     display: flex;
-@@ -67,31 +86,12 @@
+    gap: 40px;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
   }
