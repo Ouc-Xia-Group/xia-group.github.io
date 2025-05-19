@@ -459,8 +459,8 @@ main {
   
   .top-carousel-container {
     position: relative;
-    width: 100vw;
-    height: 715px;
+    width: auto;
+    max-height: 715px;
     margin-left: calc(-50vw + 50%);
     overflow: hidden;
     z-index: 0;
