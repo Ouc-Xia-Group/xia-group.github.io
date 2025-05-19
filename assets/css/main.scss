@@ -255,7 +255,8 @@ main {
 }
 
 .lab-news-left {
-  flex: 1.2;                /* 大屏时占比稍大 */
+  flex: 1 1 auto;                /* 大屏时占比稍大 */
+  min-width: 200px;
 }
 
 /* —— 响应式：宽度小于 768px 时 —— */
