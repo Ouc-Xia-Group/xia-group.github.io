@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!doctype html>
-<html lang="en" class="no-js">
+  <html lang="en" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
@@ -13,38 +13,48 @@ layout: compress
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
-
+    <div class="news-banner">
+      <img src="{{'images/sysdt.png' | relative_url}}" alt="实验室动态横幅图">
+    </div>
     <div id="main" role="main">
-      {% unless page.author_profile == false %}
-        {% include sidebar.html %}
-      {% endunless %}
-      
-      {% if page.i_banner == true %}
-        <div class="top-carousel-container">
-          <div class="top-carousel">
-            <div class="top-slide active">
-              <img src="images/sysdt.png" alt="轮播图1">
-            </div>
-            <div class="top-slide">
-              <img src="images/zy.png" alt="轮播图2">
-            </div>
+      <div class="container">
+
+        {% assign navItem = site.data.navigation.main | where: "title", page.title | first %}
+        {% if navItem %}
         
-            <button class="top-carousel-btn prev">&#10094;</button>
-            <button class="top-carousel-btn next">&#10095;</button>
-          </div>
-        </div>
-      {% endif %}
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-        <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
-            {{ content }}
-          </section>
-        </div>
-      </article>
+          {% if navItem.sidebar %}
+          <aside class="side-nav">
+            <ul id="sidebar-list">
+              {% for sidebar in navItem.sidebar_items %}
+              <li class="sidebar-item">
+                <a href="javascript:void(0);"
+                  data-file="{{ sidebar.file | default: sidebar.url | replace: ' ', '-' }}.md"
+                  data-type="{% if sidebar.list %}list{% else %}markdown{% endif %}"
+                  data-parent="{{ navItem.title }}">
+                  {{ sidebar.title }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </aside>
+          {% endif %}
+
+          <main class="main">
+            <div class="content-header-bar">
+              <div class="content-header-left"></div>
+              <div class="content-header-right"></div>
+            </div>
+            <div id="content"></div>
+          </main>
+
+        {% endif %}
+
+      </div>
     </div>
 
     {% include scripts.html %}
 
   </body>
 </html>
+
+
