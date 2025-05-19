@@ -5,9 +5,24 @@ author_profile: false
 ---
 
 
-<div class="post-wrapper_mr">
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+</head>
+
+<body>
+
+  {% include browser-upgrade.html %}
+  {% include masthead.html %}
+  <div class="post-wrapper_mr">
 
     <div class="post-content_mr">
         {{ content }}
     </div>
 </div>
+  {% include scripts.html %}
+
+</body>
+</html>
