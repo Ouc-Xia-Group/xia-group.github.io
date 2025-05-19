@@ -187,11 +187,11 @@ main {
         display: none; /* 移动端隐藏按钮，保留滑动手势 */
     }
     main {
-        max-width: 100%;
+        max-width: 90%;
         margin: 0;
     }
     img, video {
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
     }
     .side-nav {
