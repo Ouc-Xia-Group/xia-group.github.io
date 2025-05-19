@@ -10,7 +10,7 @@ main:
       - title: "实验室简介"
         url: "_pages/introduce/person"
       - title: "导师队伍"
-        url: "_pages/introduce/people"
+        url: "introduce/people"
       - title: "毕业去向"
         url: "_pages/introduce/graduation"
 
