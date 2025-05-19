@@ -168,7 +168,11 @@ main {
         padding: 0 25px;
         gap: 20px;
     }
-
+    .page {
+      flex-direction: column;
+        padding: 0 25px;
+        gap: 20px;
+    }
     main {
         max-width: 100%;
         margin: 0;
