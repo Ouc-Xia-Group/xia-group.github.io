@@ -6,7 +6,7 @@ re: true
 
 <div class="profile-row">
   <div class="profile-card">
-    <a href="{{ '_pages/teacher/xiahui/' | relative_url }}">
+    <a href="{{ '_pages/teacher/guozhongwen/' | relative_url }}">
       <img src="{{ 'images/guozhongwen.jpg' | relative_url}}" alt="photo" />
     </a>
     <p><strong>郭忠文</strong></p>
