@@ -163,6 +163,13 @@ main {
 }
 
 @media (max-width: 992px) {
+
+    .page_xiahui{
+        width: 100%;
+    margin: 0 auto;
+    /* padding-left: 200px; */
+    box-sizing: border-box;
+    }
     .container {
         flex-direction: column;
         padding: 0 25px;
