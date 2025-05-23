@@ -10,7 +10,7 @@ main:
     url: "_pages/project/index"
     sidebar: true
     sidebar_items:
-      - title: "成果展示"
+      - title: "科研成果"
         list: true
         content-list: [
           {title: '胸部CT肺结节诊断系统', url: '_pages/project/project1',img: 'images/fjj.png'},
