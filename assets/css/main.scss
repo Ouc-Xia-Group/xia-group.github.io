@@ -163,10 +163,6 @@ main {
 }
 
 @media (max-width: 767px) {
-
-    .page_xiahui{
-        padding-left: 0;
-    }
     .container {
         flex-direction: column;
         padding: 0 25px;
@@ -247,6 +243,10 @@ main {
   .ul{
     padding-inline-start: 0.5em;
   }
+
+    .page_xiahui{
+        padding-left: 0px;
+    }
 }
 
 .lab-news-section {
