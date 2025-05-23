@@ -425,7 +425,7 @@ main {
   
   .carousel-caption {
     padding: 10px 5px;
-    height: 150px;
+    height: 165px;
   }
   
   //首页新闻动态右 标题
@@ -847,8 +847,9 @@ main {
   // all_news.html
   .news-banner img {
     width: 100%;
-    height: 240px;
+    height: 355px;
     object-fit: cover;
+    object-position: top;
   }
   
   .news-tab-nav {
@@ -926,15 +927,17 @@ main {
   
   .news-banner {
     width: 100vw;
+    height: 355px;
     margin-left: calc(-50vw + 50%);
     overflow: hidden;
   }
   
   .news-banner img {
     width: 100%;
-    height: 235px;
+    height: 355px;
     display: block;
     object-fit: cover;
+    object-position: top;
   }
 
   .news-item {
@@ -1185,4 +1188,80 @@ main {
     align-items: center;
     margin-left: 10px;
   }
+
+  .intro-box {
+  border: 1px solid #e0e0e0;       /* 淡灰色边框 */
+  background-color: #fafafa;      /* 浅灰背景 */
+  padding: 20px 25px;             /* 内边距 */
+  border-radius: 8px;             /* 圆角 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* 轻微阴影 */
+  margin-bottom: 30px;            /* 下方留白 */
+  line-height: 1.7;               /* 行高 */
+}
+
+.intro-box p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 响应式：手机屏幕时略微减少内边距 */
+@media (max-width: 768px) {
+  .intro-box {
+    padding: 15px 20px;
+  }
+}
   
+.intro-box p {
+  margin: 0;
+  padding: 0;
+}
+
+.intro-box .intro-line {
+  display: block;
+  position: relative;
+  padding-left: 30px;       /* 给箭头留出空间 */
+  margin-bottom: 12px;      /* 行间距 */
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  transition: color 0.3s;
+}
+
+/* 左侧小三角箭头 */
+.intro-box .intro-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid #3498db;  /* 箭头颜色 */
+  transition: border-left-color 0.3s, transform 0.3s;
+}
+
+/* 悬停时的动效 */
+.intro-box .intro-line:hover {
+  color: #2c3e50;
+}
+.intro-box .intro-line:hover::before {
+  border-left-color: #1abc9c;      /* 换一个亮色 */
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* 移动端稍微压缩一下内边距 */
+@media (max-width: 768px) {
+  .intro-box .intro-line {
+    padding-left: 24px;
+    margin-bottom: 10px;
+  }
+  .intro-box .intro-line::before {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #3498db;
+  }
+}
+
