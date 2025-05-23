@@ -1,3 +1,13 @@
+<div class="intro-box">
+<p>
+    <span class="intro-line">“智能物联网交互与安全”实验室隶属于中国海洋大学，由中国海洋大学二级教授郭忠文领衔的“智能物联网”团队核心成员夏辉教授担任负责人。</span>
+    <span class="intro-line">本实验室聚焦物联网、人工智能、隐私保护、边缘计算、智慧医疗等前沿领域，紧密围绕国家战略需求，深耕细作，致力于攻克物联网与人工智能领域的关键科学难题，为相关产业的发展提供坚实的理论支撑与技术保障。</span>
+    <span class="intro-line">实验室拥有一支勇于创新、积极进取的研究队伍。团队由多位资深导师组成，包括教授和多位讲师。现有成员共计41人，其中教授1人，讲师3人，博士生3人，硕士生34人。实验室每年招收博士研究生1-2名，硕士研究生8-9名。</span>
+    <span class="intro-line">欢迎同学们报考我的博士研究生和硕士研究生！<br>联系邮箱：xiahui@ouc.edu.cn</span>
+</p>
+</div>
+
+
 <div class="lab-news-section">
     <div class="lab-news-left">
         <div class="lab-news-header">
@@ -5,13 +15,13 @@
               <h2>实验室动态</h2>
             <p>Laboratory dynamics</p>
             </div>
-            <a class="more-link" href="{{ '/all_news/' | relative_url}}">更多 >></a>
+            <a class="more-link" href="/all_news/">更多 >></a>
           </div>
         <ul class="news-list">
           {% assign sorted_news = site.news | sort: "date" | reverse %}
           {% for item in sorted_news limit:6 %}
             <li>
-              <a href="{{ item.url | relative_url}}">{{ item.title }}</a>
+              <a href="{{ item.url }}">{{ item.title }}</a>
               <span>{{ item.date | date: "%m-%d" }}</span>
             </li>
           {% endfor %}
@@ -25,8 +35,8 @@
           <div class="carousel-slide {% if forloop.first %}active{% endif %}">
             <img src="{{ item.img | default: '/images/xiahui.png' }}" alt="{{ news.title }}">
             <div class="carousel-caption">
-              <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-              <p>{{ item.content | strip_html | truncate: 40, "…" }}</p>
+              <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+              <p>{{ item.content | strip_html | truncate: 60, "…" }}</p>
             </div>
           </div>
         {% endfor %}
@@ -42,7 +52,7 @@
           <h2>成果展示</h2>
           <p>Research</p>
         </div>
-        <a href="_pages/project/index" class="more-link">更多 >></a>
+        <a href="/_pages/project/index" class="more-link">更多 >></a>
     </div>
   
     <div class="project-carousel-wrapper">
@@ -52,7 +62,7 @@
         {% for section in nav_item.sidebar_items %}
           {% if section.content-list %}
             {% for project in section.content-list %}
-              <a href="{{ project.url | relative_url }}" class="project-card">
+              <a href="{{ project.url }}" class="project-card">
                 <img src="{{ project.img | default: '/images/xiahui.png' }}" alt="{{ project.title }}">
                 <div class="project-title">{{ project.title }}</div>
               </a>
