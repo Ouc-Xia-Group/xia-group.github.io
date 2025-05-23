@@ -6,11 +6,11 @@ re: true
 
 <div class="profile-row">
   <div class="profile-card">
-    <a href="/_pages/teacher/xiahui/">
-      <img src="/images/guozhongwen.jpg" alt="photo" />
+    <a href={{ '_pages/teacher/xiahui/' | relative_url }}>
+      <img src="{{ 'images/guozhongwen.jpg' | relative_url}} alt="photo" />
     </a>
     <p><strong>郭忠文</strong></p>
-    <p>智能物联网交互与安全团队负责人</p>
+    <p>智能物联网团队负责人</p>
     <p>邮箱：guozhw@ouc.edu.cn</p>
   </div>
   <!-- <div class="arrow-down1"></div> -->
@@ -23,55 +23,42 @@ re: true
 <div class="profile-row">
 
   <div class="profile-card">
-    <a href="/_pages/teacher/xiahui/">
-      <img src="/images/xiahui.jpg" alt="photo" />
+    <a href={{ '_pages/teacher/xiahui/' | relative_url}}>
+      <img src={{ 'images/xiahui.jpg' | relative_url}} alt="photo" />
     </a>
     <p><strong>夏辉</strong></p>
-    <p>研究方向：人工智能与大数据分析</p>
+    <p>研究方向：物联网、人工智能、隐私保护、边缘计算和智慧医疗</p>
     <p>邮箱：xiahui@ouc.edu.cn</p>
   </div>
   <!-- <div class="arrow-down2"></div> -->
 </div>
 
-<!-- <div class="profile-row">
-   <div class="profile-card">
-    <a href="/_pages/teacher/youyang/">
-      <img src="/xia-group.github.io/images/youyang.png" alt="photo" />
-    </a>
-    <p><strong>尤洋（副教授）</strong></p>
-    <p>研究方向：人工智能、强化学习、智能博弈、网络信息安全</p>
-    <p>邮箱：youyang@ouc.edu.cn</p>
-  </div>
-</div> -->
-
 <div class="profile-row">
-
   <div class="profile-card">
-    <a href="/_pages/teacher/fuyu">
-      <img src="/images/fuyu.png" alt="photo" />
+    <a href={{ "/_pages/teacher/yujiaping/" | relative_url}}>
+      <img src={{ "/images/yujiaping.jpg" | relative_url}} alt="photo" />
+    </a>
+    <p><strong>于佳平</strong></p>
+    <p>研究方向：边缘计算场景下的资源跨域协同, Web3, DID</p>
+    <p>邮箱：yujiaping@ouc.edu.cn</p>
+  </div>
+  <div class="profile-card">
+    <a href={{ '_pages/teacher/chenshuzhen/' | relative_url}}>
+      <img src={{ '/images/chenshuzhen.jpg' | relative_url}} alt="photo" />
+    </a>
+    <p><strong>陈姝祯</strong></p>
+    <p>研究方向：边缘智能与隐私计算</p>
+    <p>邮箱：szchen@ouc.edu.cn</p>
+  </div>
+  <div class="profile-card">
+    <a href={{ '_pages/teacher/fuyu' | relative_url}}>
+      <img src={{ 'images/fuyu.png' | relative_url}} alt="photo" />
     </a>
     <p><strong>傅宇</strong></p>
     <p>研究方向：医学影像处理与智能计算</p>
     <p>邮箱：fuyu@ouc.edu.cn</p>
   </div>
   
-  <div class="profile-card">
-    <a href="/_pages/teacher/chenshuzhen/">
-      <img src="/images/chenshuzhen.jpg" alt="photo" />
-    </a>
-    <p><strong>陈姝祯</strong></p>
-    <p>研究方向：边缘智能与隐私计算</p>
-    <p>邮箱：szchen@ouc.edu.cn</p>
-  </div>
-
-  <div class="profile-card">
-    <a href="/_pages/teacher/yujiaping/">
-      <img src="/images/yujiaping.jpg" alt="photo" />
-    </a>
-    <p><strong>于佳平</strong></p>
-    <p>研究方向：边缘计算场景下的资源跨域协同, Web3, DID</p>
-    <p>邮箱：yujiaping@ouc.edu.cn</p>
-  </div>
 
 </div>
 
