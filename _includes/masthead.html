@@ -9,7 +9,7 @@
             <img src="{{ 'images/zghydx1.jpg' | relative_src }} " width="363" height="80"/></li>
           {% for link in site.data.navigation.main %}
             <li class="masthead__menu-item">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              <a href="{{ domain }}{{ link.url | relative_src }}">{{ link.title }}</a>
             </li>
           {% endfor %}
         </ul>
