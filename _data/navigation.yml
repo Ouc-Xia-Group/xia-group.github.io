@@ -3,34 +3,29 @@ main:
   - title: "首页"
     url: "/about"
 
-  - title: "实验室介绍"
-    url: "_pages/introduce/index"
-    sidebar: true
-    sidebar_items:
-      - title: "实验室简介"
-        url: "introduce/person"
-      - title: "导师队伍"
-        url: "introduce/people"
-      - title: "毕业去向"
-        url: "introduce/graduation"
-
+  - title: "师资力量"
+    url: "/_pages/people"
 
   - title: "成果展示"
-    url: "_pages/project/index"
+    url: "/_pages/project/index"
     sidebar: true
     sidebar_items:
       - title: "成果展示"
         list: true
         content-list: [
-          {title: '胸部CT肺结节诊断系统', url: '_pages/project/project1',img: 'images/fjj.png'},
-          {title: '胸部CT三维重建分析系统', url: '_pages/project/project2',img: 'images/swcj.png'},
-          {title: '肠镜智能检测系统', url: '_pages/project/project3',img: 'images/cxt.png'}
+          {title: '胸部CT肺结节诊断系统', url: '/_pages/project/project1',img: 'images/fjj.png'},
+          {title: '胸部CT三维重建分析系统', url: '/_pages/project/project2',img: 'images/swcj.png'},
+          {title: '肠镜智能检测系统', url: '/_pages/project/project3',img: 'images/cxt.png'}
         ]
       - title: "论文发表" 
-        url: "project/paper"
+        url: "/_pages/project/paper"
       - title: "项目研究" 
-        url: "project/projects"
+        url: "/_pages/project/project"
 
   - title: "实验室动态"
-    url: "all_news"
+    url: "/all_news"
+  
+  - title: "毕业去向"
+    url: "/_pages/graduation"
+
 
