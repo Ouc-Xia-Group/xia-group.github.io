@@ -13,7 +13,9 @@ layout: compress
 
   {% include browser-upgrade.html %}
   {% include masthead.html %}
-
+  <div class="news-banner">
+          <img src="/images/zghydx.jpg" alt="实验室动态横幅图">
+        </div>
   <div id="main" role="main">
     {% unless page.author_profile == false %}
       {% include sidebar.html %}
@@ -21,17 +23,15 @@ layout: compress
       
     {% if page.i_banner == true %}
       <div class="top-carousel-container">
-        <div class="top-carousel">
+        <!-- <div class="top-carousel">
           <div class="top-slide active">
             <img src="images/sysdt.png" alt="轮播图1">
           </div>
           <div class="top-slide">
             <img src="images/zy.png" alt="轮播图2">
           </div>
+        </div> -->
         
-          <button class="top-carousel-btn prev">&#10094;</button>
-          <button class="top-carousel-btn next">&#10095;</button>
-        </div>
       </div>
     {% endif %}
     <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
