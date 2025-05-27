@@ -154,7 +154,7 @@ h1:before, .anchor:before {
 
 main {
     flex: 1;
-    max-width: calc(100% - 260px); /* 计算剩余宽度 */
+    max-width: 100%; /* 计算剩余宽度 */
     background-color: #fff;
     border-radius: 8px;
     padding: 30px;
@@ -1086,9 +1086,6 @@ main {
     display: block;
   }
   
-  .content-list {
-    padding: 20px;
-  }
   .section-title {
     color: #c2185b; /* 粉红色 */
     font-weight: bold;
@@ -1156,27 +1153,27 @@ main {
   
   .list-item {
     list-style: none;
-    margin: 16px 0;
+    margin: 10px 0;
   }
 
   .list-card {
-    border: none;
-    background: none;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
     box-shadow: none;
     padding: 10px 0;
   }
 
-  .list-card:hover {
-    transform: translateY(-4px);
-  }
-
   .list-card a {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 15px;
     text-decoration: none;
     color: #333;
+    
+    border-bottom: 1px solid transparent; /* 初始隐藏实线 */
+    // transition: border-color 0.3s ease;
   }
-
+  .list-card a:hover {
+    border-bottom-color: #000;
+  }
   .pagination {
     margin-top: 20px;
     text-align: center;
