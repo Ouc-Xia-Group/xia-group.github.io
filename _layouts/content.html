@@ -10,51 +10,203 @@ layout: compress
 </head>
 
 <body>
-
   {% include browser-upgrade.html %}
   {% include masthead.html %}
+  
   <div class="news-banner">
-    <img src={{ 'images/zghydx.jpg' | relative_url }}  alt="实验室动态横幅图">
+    <img src="{{ 'images/zghydx.jpg' | relative_url }}" alt="实验室动态横幅图">
   </div>
+
   <div id="main" role="main">
     <div class="container">
-
       {% assign navItem = site.data.navigation.main | where: "title", page.title | first %}
-      {% if navItem %}
       
-        {% if navItem.sidebar %}
-        <aside class="side-nav">
-          <ul id="sidebar-list">
-            {% for sidebar in navItem.sidebar_items %}
-            <li class="sidebar-item">
-              <a href="javascript:void(0);"
-                 data-file="{{ sidebar.file | default: sidebar.url | replace: ' ', '-' }}.md"
-                 data-type="{% if sidebar.list %}list{% else %}markdown{% endif %}"
-                 data-parent="{{ navItem.title }}">
-                {{ sidebar.title }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-        </aside>
-        {% endif %}
+      {% if navItem %}
+      <!-- 侧边栏导航 -->
+      <aside class="side-nav">
+        <ul id="sidebar-list">
+          {% for sidebar in navItem.sidebar_items %}
+          <li class="sidebar-item">
+            <a href="javascript:void(0);"
+               data-key="{{ sidebar.title }}"
+               data-type="{% if sidebar.list %}list{% else %}markdown{% endif %}"
+               data-parent="{{ navItem.title }}">
+              {{ sidebar.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
 
-        <main class="main">
-          <div class="content-header-bar">
-            <div class="content-header-left"></div>
-            <div class="content-header-right"></div>
-          </div>
-          <div id="content"></div>
-        </main>
-
+      <!-- 主内容区 -->
+      <main class="main">
+        <div class="content-header-bar">
+          <div class="content-header-left"></div>
+          <div class="content-header-right"></div>
+        </div>
+        <div id="content">
+        </div>
+      </main>
       {% endif %}
-
     </div>
   </div>
 
   {% include scripts.html %}
-
 </body>
 </html>
 
 
+  
+  <script>
+    
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('#sidebar-list a');
+    const contentDiv = document.getElementById('content');
+    const headerLeft = document.querySelector('.content-header-left');
+    const headerRight = document.querySelector('.content-header-right');
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const isFromMore = urlParams.get('from') === 'more';
+    let defaultIndex = 0;
+    if (isFromMore) {
+      defaultIndex = 2; // 假设 "更多" 对应第三个链接（索引2）
+    }
+
+    const preloadedContent = {
+      {% if navItem %}
+      {% for sidebar in navItem.sidebar_items %}
+        {% unless sidebar.list %}
+          {% for item in site.pages%}
+            {% if item.title == sidebar.title %}
+              "{{ item.title }}": {{ item.content | markdownify | jsonify }},
+            {% endif %}
+          {% endfor %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+    };
+    const sidebarListData = {
+    {% if navItem %}
+      {% for sidebar in navItem.sidebar_items %}
+        {% if sidebar.list %}
+          "{{ sidebar.title | escape }}": [
+            {% for subitem in sidebar['content-list'] %}
+              { title: "{{ subitem.title | escape }}", url: "{{ subitem.url | escape }}" },
+            {% endfor %}
+          ],
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  };
+    // 更新标题栏
+    function updateHeader(parent, title) {
+      if (headerLeft) headerLeft.textContent = title;
+      if (headerRight) {
+        headerRight.innerHTML = `
+        当前位置：
+        <a href="/"  target="_self">首页</a> &gt;
+        <a href="#"  target="_self">${parent}</a> &gt;
+        ${title}`;
+      }
+    }
+
+    // 加载预渲染内容
+    function loadContent(key) {
+      const content = preloadedContent[key];
+      if (content) {
+        contentDiv.innerHTML = `<p class="error">内容加载失败，请检查配置${urlParams}</p> `;
+        // contentDiv.innerHTML = content;
+      } else {
+        contentDiv.innerHTML = `<p class="error">内容加载失败，请检查配置${key}</p> `;
+      }
+    }
+
+    // 加载列表内容
+    function loadContentList(title) {
+      const list = sidebarListData[title];
+      const itemsPerPage = 10;
+      
+      contentDiv.innerHTML = `
+        <div class="content-list paged-list">
+          <ul id="paged-list-container"></ul>
+          <div class="pagination" id="pagination-controls"></div>
+        </div>
+      `;
+
+      renderPagedList(list, itemsPerPage);
+    }
+
+    // 处理点击事件
+    function handleLinkClick(link) {
+      const key = link.dataset.key;
+      const type = link.dataset.type;
+      const parent = link.dataset.parent;
+      const title = link.textContent.trim();
+
+      updateHeader(parent, title);
+
+      if (type === 'list') {
+        loadContentList(title);
+      } else {
+        loadContent(key);
+      }
+    }
+
+    // 绑定事件
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        handleLinkClick(this);
+      });
+    });
+
+    // 默认加载第一个
+    if (links.length > defaultIndex) {
+    links[defaultIndex].click();
+  } else if (links.length > 0) { // 兜底逻辑
+    links[0].click();
+  }
+
+    // 分页功能（保持原逻辑）
+    function renderPagedList(list, itemsPerPage) {
+      /* 保持原有分页实现不变 */
+      const container = document.getElementById('paged-list-container');
+    const pagination = document.getElementById('pagination-controls');
+    let currentPage = 1;
+    const totalPages = Math.ceil(list.length / itemsPerPage);
+
+    function showPage(page) {
+      container.innerHTML = '';
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageItems = list.slice(start, end);
+
+      pageItems.forEach(item => {
+        // item.url = 'https://ouc-xia-group.github.io/xia-group.github.io/' + item.url
+        const li = document.createElement('li');
+        li.className = 'list-item';
+        li.innerHTML = `<div class="list-card"><a href="${item.url}">${item.title}</a></div>`;
+        container.appendChild(li);
+      });
+
+      renderPagination();
+    }
+
+    function renderPagination() {
+      pagination.innerHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add('active');
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          showPage(currentPage);
+        });
+        pagination.appendChild(btn);
+      }
+    }
+
+    showPage(currentPage);
+    }
+  });
+  </script>

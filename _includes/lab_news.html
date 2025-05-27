@@ -52,15 +52,15 @@
           <h2>成果展示</h2>
           <p>Research</p>
         </div>
-        <a class="more-link" href="{{ '/_pages/project/index' | relative_url }}">更多 >></a>
+        <a class="more-link" href="{{ '/_pages/project/index' | relative_url }}" data-from="more">更多 >></a>
     </div>
   
     <div class="project-carousel-wrapper">
       <button class="carousel-btn left">&#10094;</button>
       <div class="project-carousel-track">
-        {% assign nav_item = site.data.navigation.main | where: "title", "成果展示" | first %}
+        {% assign nav_item = site.data.navigation.main | where: "title", "科研成果" | first %}
         {% for section in nav_item.sidebar_items %}
-          {% if section.content-list %}
+          {% if section.list %}
             {% for project in section.content-list %}
               <a href="{{ project.url | relative_url }}" class="project-card">
                 <img src="{{ project.img | relative_url}}" alt="{{ project.title }}">
