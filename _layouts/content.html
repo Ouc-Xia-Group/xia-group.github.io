@@ -183,9 +183,11 @@ layout: compress
 
       pageItems.forEach(item => {
         // item.url = 'https://ouc-xia-group.github.io/xia-group.github.io/' + item.url
+        const relativeUrl = new URL(item.url, window.location.origin).pathname;
+  
         const li = document.createElement('li');
         li.className = 'list-item';
-        li.innerHTML = `<div class="list-card"><a href="${item.url}">${item.title}</a></div>`;
+        li.innerHTML = `<div class="list-card"><a href="${relativeUrl}">${item.title}</a></div>`;
         container.appendChild(li);
       });
 
