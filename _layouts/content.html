@@ -114,8 +114,8 @@ layout: compress
     function loadContent(key) {
       const content = preloadedContent[key];
       if (content) {
-        contentDiv.innerHTML = `<p class="error">内容加载失败，请检查配置${urlParams}</p> `;
-        // contentDiv.innerHTML = content;
+        // contentDiv.innerHTML = `<p class="error">内容加载失败，请检查配置${urlParams}</p> `;
+        contentDiv.innerHTML = content;
       } else {
         contentDiv.innerHTML = `<p class="error">内容加载失败，请检查配置${key}</p> `;
       }
