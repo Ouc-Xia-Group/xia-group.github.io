@@ -35,8 +35,8 @@ re: true
 
 <div class="profile-row">
   <div class="profile-card">
-    <a href="{{ "/_pages/teacher/yujiaping/" | relative_url}}">
-      <img src="{{ "/images/yujiaping.jpg" | relative_url}}" alt="photo" />
+    <a href="{{ '/_pages/teacher/yujiaping/' | relative_url}}">
+      <img src="{{ '/images/yujiaping.jpg' | relative_url}}" alt="photo" />
     </a>
     <p><strong>于佳平</strong></p>
     <p>研究方向：边缘计算场景下的资源跨域协同, Web3, DID</p>

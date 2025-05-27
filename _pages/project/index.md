@@ -1,4 +1,4 @@
 ---
 layout: content
-title: 成果展示
+title: 科研成果
 ---

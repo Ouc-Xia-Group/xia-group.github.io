@@ -168,6 +168,7 @@ collections:
   news:
     output: true
     permalink: /news/:title/
-  page:
+  pages:
     output: true
     permalink: /:name/
+
