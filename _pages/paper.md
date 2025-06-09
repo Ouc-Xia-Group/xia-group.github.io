@@ -2,6 +2,7 @@
 title: 论文发表
 ---
 
+- Ding Li, ___Hui Xia*___, Xin Li, Rui Zhang, and Mingda Ma, DTGBA: A Stronger Graph Backdoor Attack with Dual Triggers, Neural Networks (NN), SCI, IF 6.0, 2025 (中科院2区期刊，CCF B类期刊)
 - ___Hui Xia*___, Xiangwei Zhao, Luming Wang, Rui Zhang, and Shuo Xu，Clean-Label Graph Backdoor Attack in the Node Classification Task， The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)， 2025， CCF A类会议，第一作者/通讯作者
 - Ding Li, ___Hui Xia*___, Xin Li, Rui Zhang, and Mingda Ma，Rethinking the Robustness of Graph Neural Networks: An Information Theory Perspective， Knowledge-based Systems (KBS)， 2025， 中科院1区期刊，学生一作/通讯作者
 - Jiaping Yu, Hongjia Wu, Tongqing Zhou, Zhiping Cai, Wenyuan Kuang, ___Hui Xia*___，CityTrac: Precise Camera Selection and Movement Prediction for Object Tracking in Hyper-scale Public Security Camera Network， IEEE Internet of Things Journal (IoT-J)， 2025， 中科院1区期刊，学生一作/通讯作者
