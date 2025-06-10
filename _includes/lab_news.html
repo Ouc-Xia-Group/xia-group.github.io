@@ -39,7 +39,7 @@
               <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
               <p>{{ item.content | strip_html | truncate: 60, "…" }}</p>
             </div>
-            {% end if %}
+            {% endif %}
           </div>
         {% endfor %}
       </div>      
