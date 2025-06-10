@@ -19,7 +19,7 @@
           </div>
         <ul class="news-list">
           {% assign sorted_news = site.news | sort: "date" | reverse %}
-          {% for item in sorted_news limit:6 %}
+          {% for item in sorted_news limit:5 %}
             <li>
               <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
               <span>{{ item.date | date: "%m-%d" }}</span>
@@ -33,11 +33,13 @@
         {% assign re_news = site.news | where: "re", true | sort: "date" | reverse %}
         {% for item in re_news limit:3 %}
           <div class="carousel-slide {% if forloop.first %}active{% endif %}">
+            {% if item.img %}
             <img src="{{ item.img | relative_url }}" alt="{{ news.title }}">
             <div class="carousel-caption">
               <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
               <p>{{ item.content | strip_html | truncate: 60, "…" }}</p>
             </div>
+            {% end if %}
           </div>
         {% endfor %}
       </div>      
