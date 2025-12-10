@@ -2,6 +2,8 @@
 title: 论文发表
 ---
 
+- Xiao-xue Song, __Hui Xia*__, Shuo Xu, Yuyao Zhu, and Le Li, Datura: Durable and Stable Backdoor Attack against Federated Learning, IEEE International Conference on Computer Communications (INFOCOM 2026), pp: 1-9, 2026 (CCF A类会议)
+- Yu Du, __Hui Xia*__, Chuxiao Su, Rui Zhang, and Ding Li, LCMC Attacks: Localized Cross-Modal Collaborative Black-Box Adversarial Attack for Visual Object Tracking, Knowledge-based Systems (KBS), SCI, IF 7.6, Volume 333, Article Number 115019, 2026 (中科院1区期刊)
 - Zi Kang, ___Hui Xia*___, Rui Zhang, Xiaoxue Song, Le Li, and Chunqiang Hu, Fast and Controllable Bias-Guided Jailbreak Attack on Large Language Models, IEEE Internet of Things Journal, 2025, 中科院二区期刊, 学生一作/通讯作者
 - Xiaolong Shi, Chuxiao Su, Hui Xia, Zi Kang, Rui Zhang, Zuming Zhang，Imperceptible Pixel-Precise Adaptive Multi-Level Sparse Adversarial Attacks on Video Recognition Models， Knowledge-based Systems (KBS)， 2025， 中科院1区期刊，学生一作/通讯作者
 - Ding Li, ___Hui Xia*___, Xin Li, Rui Zhang, and Mingda Ma, DTGBA: A Stronger Graph Backdoor Attack with Dual Triggers, Neural Networks (NN), SCI, IF 6.0, 2025 (中科院2区期刊，CCF B类期刊)
@@ -45,6 +47,7 @@ title: 论文发表
 - ___Hui Xia*___, Chun-qiang Hu, Fu Xiao, Xiang-guo Cheng, and Zhen-kuan Pan，An Efficient Social-like Semantic-aware Service Discovery Mechanism for Large-scale Internet of Things， Computer Networks（ComNet）， 2019， CCF B类期刊， 第一作者/通讯作者
 - ___夏辉*___, 张三顺, 孙运传, 肖甫, 李晔, 成秀珍，车载自组网中基于信任管理的安全组播协议设计， 计算机学报， 2019， CCF A类中文期刊， 第一作者/通讯作者
 - ___夏辉*___, 于佳, 秦尧, 程相国, 陈仁海, 潘振宽，嵌入式领域ECC专用指令处理器的研究， 计算机学报， 2017， CCF A类中文期刊， 第一作者/通讯作者
+
 
 
 
