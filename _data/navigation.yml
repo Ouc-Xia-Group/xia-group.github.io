@@ -3,8 +3,8 @@ main:
   - title: "首页"
     url: "about"
 
-  - title: "师资力量"
-    url: "_pages/people"
+  # - title: "师资力量"
+  #   url: "_pages/people"
 
   - title: "科研成果"
     url: "_pages/project/index"
@@ -28,5 +28,6 @@ main:
   
   - title: "毕业去向"
     url: "_pages/graduation"
+
 
 
