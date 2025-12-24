@@ -19,7 +19,8 @@ main:
         content-list: [
           {title: '胸部CT肺结节诊断系统', url: '_pages/project/project1',img: 'images/fjj.png'},
           {title: '胸部CT三维重建分析系统', url: '_pages/project/project2',img: 'images/swcj.png'},
-          {title: '肠镜智能检测系统', url: '_pages/project/project3',img: 'images/cxt.png'}
+          {title: '肠镜智能检测系统', url: '_pages/project/project3',img: 'images/cxt.png'},
+          {title: '颈部CTA三维重建与斑块智能检测分析系统', url: '_pages/project/project4', img: 'images/swcjybbznjc.png'}
         ]
       
 
@@ -28,6 +29,7 @@ main:
   
   - title: "毕业去向"
     url: "_pages/graduation"
+
 
 
 
